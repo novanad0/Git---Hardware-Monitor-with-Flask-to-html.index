@@ -1,5 +1,7 @@
 For use on a linux server with apache2
 
+Place contents of New Dash + Monitor into /var/www/systemmonitor
+
   cd /var/www/systemmonitor/
 
   nano systemmonitor.wsgi
