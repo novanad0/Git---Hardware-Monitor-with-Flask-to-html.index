@@ -1,4 +1,4 @@
-For use on a linux server
+For use on a linux server with apache2
 
   cd /var/www/systemmonitor/
 
