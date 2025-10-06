@@ -43,6 +43,6 @@ Enable and restart apache
 
   sudo a2ensite systemmonitor.conf &&
   sudo systemctl reload apache2 &&
-  sudo systemctl restart apache &&
+  sudo systemctl restart apache
 
 Go to site
