@@ -1,0 +1,23 @@
+
+
+
+#apps{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(37, 37, 37, 0.527);
+    background-position-y: top 10%;
+}
+
+#appDrawer{
+    border: 10px;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+#expandBarText{
+    display: flex;
+    text-decoration: none;
+    align-items: left;
+}

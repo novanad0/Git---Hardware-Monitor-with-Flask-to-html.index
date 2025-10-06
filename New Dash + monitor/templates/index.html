@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+<div class="topBar">
+
+    <nav id="popout">
+        <label for="sidebarActive" id="closeSidebarButton">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        </label>
+        <div class="linksContainer" id="linksContainer">
+            <a id="homeLink" href="index.html">Home</a>
+            <a id="appsLink" href="Apps.html">Apps</a>
+        </div>
+    </nav>
+
+    <div class="wrapper" id="hamburg">
+        <a href="#" class="nav">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </a>
+    </div>
+
+    <div class="bar">
+        <p></p>
+        <p class="barText">Home</p>
+    </div>
+    
+    <div id="hamburg2">
+        <a href="#" class="nav">
+            <div class="one" style="background-color: rgba(240, 248, 255, 0);"></div>
+            <div class="two" style="background-color: rgba(240, 248, 255, 0);"></div>
+            <div class="three" style="background-color: rgba(240, 248, 255, 0);"></div>
+        </a>
+</div>
+
+</div>
+
+
+<br>
+
+    <div class="container">
+        <div class="card">
+            <div class="stat">CPU Usage: <span id="cpu"></span>%</div>
+            <canvas id="cpuChart"></canvas>
+        </div>
+
+        <div class="card">
+            <div class="stat">Memory Usage: <span id="memory"></span>%</div>
+            <canvas id="memoryChart"></canvas>
+        </div>
+
+        <div class="card">
+            <div class="stat">Network (MB/s)</div>
+            <canvas id="networkChart"></canvas>
+        </div>
+    </div>
+
+    <div class="card center-card">
+        <div class="stat">Disk Usage: <span id="disk"></span>%</div>
+        <div class="stat">▲Sent: <span id="sent"></span> bytes</div>
+        <div class="stat">▼Received: <span id="recv"></span> bytes</div>
+        <div class="stat">Time: <span id="time"></span></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+</body>
+</html>

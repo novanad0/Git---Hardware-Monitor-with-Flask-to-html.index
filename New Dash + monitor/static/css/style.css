@@ -1,0 +1,123 @@
+html{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(224, 224, 224);
+}
+
+html, body{
+    background-color: rgb(44, 44, 44);
+    background-attachment: fixed;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Top Bar */
+
+.nav div{
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px 0;
+    border-radius: 25px;
+    transition: 0.3s;
+    display: flex;
+}
+
+.nav {
+    width: 30px;
+    display: block;
+    margin: .75em 0 0 1em;
+    z-index: 1;
+}
+
+.one{
+    width: 30px;
+
+}
+
+.two{
+    width: 20px;
+}
+
+.three{
+    width: 25px;
+}
+
+.nav:hover div {
+    width: 30px;
+}
+
+.topBar{
+    height: 50px;
+    text-align: center;
+    background-color: rgba(2, 63, 0, 0.356);
+    margin: 0px 0;
+    border: 5px solid rgb(17, 17, 17);
+    border-radius: 30px 30px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.wrapper{
+    display: flex;
+}
+
+/* Menu popout */
+
+#popout{
+    display: none;
+}
+
+.linksContainer{
+    align-self: center;
+}
+
+#closeSidebarButton{
+    padding: 10px;
+}
+
+#homeLink, #appsLink{
+    color: white;
+    text-decoration: none;
+}
+
+#homeLink:hover, #appsLink:hover{
+    background-color: rgba(46, 46, 46, 0.856);
+    transition: ease-in-out .25s;
+    border: 8px solid rgba(46, 46, 46, 0.856);
+    border-radius: 5px;
+    width: 20px;
+}
+
+/* Network Monitor */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #00350b;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    min-width: 300px;
+}
+
+.center-card {
+    margin: auto;
+    width: fit-content;
+}
+
+canvas {
+    width: 100% !important;
+    height: 250px !important;
+}
+
+.stat {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
