@@ -18,24 +18,24 @@ Configure Apache virtual host
 
 sudo nano /etc/apache2/sites-available/systemmonitor.conf
 
-<VirtualHost *:80>
-  ServerName [your_server_ip_or_domain] 
+    <VirtualHost *:80>
+      ServerName [your_server_ip_or_domain] 
 
-  WSGIDaemonProcess systemmonitor python-path=/var/www/systemmonitor
-  WSGIScriptAlias / /var/www/systemmonitor/systemmonitor.wsgi
+      WSGIDaemonProcess systemmonitor python-path=/var/www/systemmonitor
+      WSGIScriptAlias / /var/www/systemmonitor/systemmonitor.wsgi
 
-  <Directory /var/www/systemmonitor>
-      Require all granted
-  </Directory>
+      <Directory /var/www/systemmonitor>
+          Require all granted
+      </Directory>
 
-  Alias /static /var/www/systemmonitor/static
-  <Directory /var/www/systemmonitor/static>
-      Require all granted
-  </Directory>
+      Alias /static /var/www/systemmonitor/static
+      <Directory /var/www/systemmonitor/static>
+          Require all granted
+      </Directory>
 
-  ErrorLog ${APACHE_LOG_DIR}/systemmonitor-error.log
-  CustomLog ${APACHE_LOG_DIR}/systemmonitor-access.log combined
-</VirtualHost>
+      ErrorLog ${APACHE_LOG_DIR}/systemmonitor-error.log
+      CustomLog ${APACHE_LOG_DIR}/systemmonitor-access.log combined
+    </VirtualHost>
 
 save and exit
 
