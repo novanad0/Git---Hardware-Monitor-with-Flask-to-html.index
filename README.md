@@ -41,8 +41,8 @@ Configure Apache virtual host
 
 Enable and restart apache
 
-  sudo a2ensite systemmonitor.conf
-  sudo systemctl reload apache2
-  sudo systemctl restart apache
+  sudo a2ensite systemmonitor.conf &&
+  sudo systemctl reload apache2 &&
+  sudo systemctl restart apache &&
 
 Go to site
