@@ -38,6 +38,10 @@ def get_system_stats():
 def index():
     return render_template('index.html')
 
+@app.route('/apps')
+def apps():
+    return render_template('apps.html')
+
 @app.route('/stats')
 def stats():
     return jsonify(get_system_stats())

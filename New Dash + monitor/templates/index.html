@@ -15,8 +15,8 @@
             <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
         </label>
         <div class="linksContainer" id="linksContainer">
-            <a id="homeLink" href="index.html">Home</a>
-            <a id="appsLink" href="Apps.html">Apps</a>
+            <a id="homeLink" href="{{ url_for('index') }}">Home</a>
+            <a id="appsLink" href="{{ url_for('apps')}}">Apps</a>
         </div>
     </nav>
 

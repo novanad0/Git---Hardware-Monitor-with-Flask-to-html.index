@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apps</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="apptable.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/apptable.css') }}">
 </head>
 <body>
     <div class="topBar">
@@ -15,8 +15,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </label>
             <div class="linksContainer" id="linksContainer">
-                <a id="homeLink" href="index.html">Home</a>
-                <a id="appsLink" href="Apps.html">Apps</a>
+                <a id="homeLink" href="{{ url_for('index') }}">Home</a>
+                <a id="appsLink" href="{{ url_for('apps')}}">Apps</a>
             </div>
         </nav>
 
@@ -30,7 +30,7 @@
 
         <div class="bar">
             <p></p>
-            <p class="barText">GServ Apps</p>
+            <p class="barText">Apps</p>
         </div>
         
         <div id="hamburg2">
@@ -48,51 +48,47 @@
     <div id="appDrawer">
 
         <a href="#" id="expandBar1"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
-            <p id="expandBarText">Apps</p>
+            <p id="expandBarText"></p>
         </a>
 
         <div id="apps">
 
             
 
-            <a href="http://192.168.0.74:8096" target="_blank">
-                <img src="Content/jellyfin.png" height="100">
+            <a href="http://gserv:8096" target="_blank">
+                <img src="{{ url_for('static', filename='images/jellyfin.png') }}" height="100">
             </a>
 
-            <a href="http://192.168.0.74:5055" target="_blank">
-                <img src="Content/jellyseerr.png" height="100">
+            <a href="http://gserv:5055" target="_blank">
+                <img src="{{ url_for('static', filename='images/jellyseerr.png') }}" height="100">
             </a>
 
-            <a href="http://192.168.0.74:7878" target="_blank">
-                <img src="Content/radarr.png" height="100">
+            <a href="http://gserv:7878" target="_blank">
+                <img src="{{ url_for('static', filename='images/radarr.png') }}" height="100">
             </a>
 
-            <a href="http://192.168.0.74:8989" target="_blank">
-                <img src="Content/sonarr.png" height="100">
+            <a href="http://gserv:8989" target="_blank">
+                <img src="{{ url_for('static', filename='images/sonarr.png') }}" height="100">
             </a>
 
-            <a href="http://192.168.0.74:8686" target="_blank">
-                <img src="Content/lidarr.png" height="100">
+            <a href="http://gserv:8686" target="_blank">
+                <img src="{{ url_for('static', filename='images/lidarr.png') }}" height="100">
             </a>
 
-            <a href="http://192.168.0.74:9696" target="_blank">
-                <img src="Content/prowlarr.png" height="100">
+            <a href="http://gserv:9696" target="_blank">
+                <img src="{{ url_for('static', filename='images/prowlarr.png') }}" height="100">
             </a>
 
-            <a href="http://192.168.0.74:8080" target="_blank">
-                <img src="Content/qbittorrent.png" height="100">
+            <a href="http://gserv:8181" target="_blank">
+                <img src="{{ url_for('static', filename='images/sabnzbd.png') }}" height="100">
             </a>
 
-            <a href="http://192.168.0.74:81" target="_blank">
-                <img src="Content/nginx.png" height="110">
+            <a href="https://gserv:8443" target="_blank">
+                <img src="{{ url_for('static', filename='images/crafty.png') }}" height="95">
             </a>
 
-            <a href="https://192.168.0.74:8443" target="_blank">
-                <img src="Content/crafty.png" height="95">
-            </a>
-
-            <a href="http://192.168.0.74:4533" target="_blank">
-                <img src="Content/navidrome5.png" height="100">
+            <a href="http://gserv:4533" target="_blank">
+                <img src="{{ url_for('static', filename='images/navidrome5.png') }}" height="100">
             </a>
 
         </div>
@@ -104,6 +100,6 @@
 
     </div>
 
-    <script src="main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
